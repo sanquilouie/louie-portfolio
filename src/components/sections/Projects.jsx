@@ -4,6 +4,16 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import Modal from "./Modal"; // Adjust path if needed
 import BrgyTracking1 from '../../assets/images/brgy_tracking_1.jpg';
 import BrgyTracking2 from '../../assets/images/brgy_tracking_2.jpg';
+import HCCPortal4 from '../../assets/images/hcc_portal_4.png';
+import HCCPortal1 from '../../assets/images/hcc_portal_1.png';
+import HCCPortal2 from '../../assets/images/hcc_portal_2.png';
+import HCCPortal3 from '../../assets/images/hcc_portal_3.png';
+import Locker1 from '../../assets/images/automated_locker_1.png';
+import Locker2 from '../../assets/images/automated_locker_2.png';
+import Locker3 from '../../assets/images/automated_locker_3.jpg';
+import Locker4 from '../../assets/images/automated_locker_4.jpg';
+import Locker5 from '../../assets/images/automated_locker_5.jpg';
+import Locker6 from '../../assets/images/automated_locker_6.jpg';
 
 
 export const Projects = () => {
@@ -16,7 +26,7 @@ export const Projects = () => {
     title: "Bus Fare Management System",
     description:
       "A PHP-based system for tracking and managing fare collections, routes, and passenger logs.",
-    tech: ["JavaScript", "PHP", "Java", "Bootstrap", "Sunmi API"],
+    tech: ["JavaScript", "PHP", "Java", "Bootstrap", "Sunmi API", "Full-Stack Development"],
     details:
       "* Hired to take over and enhance an existing fare tracking system for a local transportation service. \n* Reviewed and debugged legacy code to restore core functionality and ensure system stability. \n * Added new features such as passenger logging enhancements and adjustable fare options. \n* Integrated with Sunmi printer-scanner devices to enable automated ticket printing and QR scanning. \nImproved code maintainability and usability based on client feedback.",
     images: [
@@ -26,7 +36,7 @@ export const Projects = () => {
       title: "Barangay Information Tracking System",
       description:
         "A centralized web application for managing household, resident, and official records in a local barangay.",
-      tech: ["PHP", "JavaScript", "MySQL"],
+      tech: ["PHP", "JavaScript", "MySQL", "Full-Stack Development"],
       details:
         "* Developed a comprehensive tracking system for managing barangay information. \n* Implemented features to record and access detailed data on residents, services, and community resources. \n* Improved administrative efficiency through streamlined data management workflows. \n* Enhanced data accessibility for authorized personnel to support informed decision-making. \n* Ensured accurate and up-to-date information to aid in community planning and service delivery.",
       images: [BrgyTracking1, BrgyTracking2],
@@ -35,13 +45,10 @@ export const Projects = () => {
       title: "HCC Student Portal",
       description:
         "A complete student information system with login, enrollment tracking, and grades viewing, built with PHP and SQL.",
-      tech: ["MySQL", "JavaScript", "PHP", "Bootstrap"],
+      tech: ["MySQL", "JavaScript", "PHP", "Bootstrap", "Full-Stack Development"],
       details:
-        "* Hired to take over and enhance an existing fare tracking system for a local transportation service. \n* Reviewed and debugged legacy code to restore core functionality and ensure system stability. \n * Added new features such as passenger logging enhancements and adjustable fare options. \n* Integrated with Sunmi printer-scanner devices to enable automated ticket printing and QR scanning. \nImproved code maintainability and usability based on client feedback.",
-      images: [
-        "/images/bus-fare-1.png",
-        "/images/bus-fare-2.png"
-      ],
+        "* Designed and implemented a feature-rich student portal for HCC using PHP and SQL. \n* Built modules for managing student data, enrollment, and academic records.\n* Integrated user authentication and role-based access control for secure usage.\n* Optimized database queries to ensure fast and reliable performance.\n* Delivered an intuitive and efficient tool for student administration.",
+      images: [HCCPortal4, HCCPortal1, HCCPortal2, HCCPortal3],
     },
     {
       title: "Automated Coin Locker",
@@ -49,11 +56,8 @@ export const Projects = () => {
         "An IoT-enabled locker system using Arduino, Raspberry Pi, and Java for secure storage and user authentication.",
       tech: ["Java", "Arduino", "Raspberry Pi"],
       details:
-        "* Hired to take over and enhance an existing fare tracking system for a local transportation service. \n* Reviewed and debugged legacy code to restore core functionality and ensure system stability. \n * Added new features such as passenger logging enhancements and adjustable fare options. \n* Integrated with Sunmi printer-scanner devices to enable automated ticket printing and QR scanning. \nImproved code maintainability and usability based on client feedback.",
-      images: [
-        "/images/bus-fare-1.png",
-        "/images/bus-fare-2.png"
-      ],
+        "* Led the programming of a sophisticated automated coin locker system as part of our capstone project. \n* Developed a user-friendly graphical interface using Java. \n* Integrated Raspberry Pi to handle the responsive touchscreen interface. \n* Programmed Arduino to manage precise locker control and real-time feedback. \n* Showcased strong hardware-software integration skills to deliver secure and efficient user interactions.",
+      images: [Locker1, Locker2, Locker3, Locker4, Locker5, Locker6],
     },
   ];
 

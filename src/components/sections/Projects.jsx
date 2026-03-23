@@ -14,6 +14,9 @@ import Locker3 from '../../assets/images/automated_locker_3.jpg';
 import Locker4 from '../../assets/images/automated_locker_4.jpg';
 import Locker5 from '../../assets/images/automated_locker_5.jpg';
 import Locker6 from '../../assets/images/automated_locker_6.jpg';
+import BusFare1 from '../../assets/images/bus_fare_1.png';
+import BusFare2 from '../../assets/images/bus_fare_2.png';
+import BusFare3 from '../../assets/images/bus_fare_3.png';
 
 
 export const Projects = () => {
@@ -29,7 +32,7 @@ export const Projects = () => {
     tech: ["PHP", "JavaScript", "MySQL", "Bootstrap", "Sunmi API", "Bug Fixing"],
     details:
       "**Client Problem:** A local transportation service had a broken fare management system that was causing revenue loss and operational headaches.\n\n**My Solution:**\n* Audited and debugged legacy PHP code to identify root causes of system failures\n* Restored core functionality including fare calculation and route management\n* Added passenger logging improvements and adjustable fare options based on business needs\n* Integrated Sunmi printer/scanner devices for automated ticket printing and QR scanning\n* Optimized database queries and improved code maintainability\n\n**Results:**\n* System reliability improved from frequent crashes to stable daily operation\n* Client could process fares 3x faster with automated ticket printing\n* Reduced manual data entry errors by 90%\n* Business owner now has reliable tools to manage operations and track revenue",
-    images: [],
+    images: [BusFare1, BusFare2, BusFare3],
     featured: true,
   },
     {

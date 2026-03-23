@@ -33,15 +33,6 @@ export const Projects = () => {
     featured: true,
   },
     {
-      title: "Barangay Information Tracking System",
-      description:
-        "A centralized web application for managing household, resident, and official records in a local barangay.",
-      tech: ["PHP", "JavaScript", "MySQL", "Full-Stack Development"],
-      details:
-        "* Developed a comprehensive tracking system for managing barangay information. \n* Implemented features to record and access detailed data on residents, services, and community resources. \n* Improved administrative efficiency through streamlined data management workflows. \n* Enhanced data accessibility for authorized personnel to support informed decision-making. \n* Ensured accurate and up-to-date information to aid in community planning and service delivery.",
-      images: [BrgyTracking1, BrgyTracking2],
-    },
-    {
       title: "HCC Student Portal",
       description:
         "Built a complete student administration system from scratch for a client needing reliable academic record management.",
@@ -50,6 +41,15 @@ export const Projects = () => {
         "**Client Problem:** An educational institution needed a reliable system to manage student data, enrollment, and academic records without expensive commercial software.\n\n**My Solution:**\n* Designed and implemented a complete student portal using PHP and MySQL\n* Built modules for student profiles, enrollment tracking, and grade management\n* Integrated secure authentication and role-based access control\n* Optimized database queries for fast performance even with large datasets\n* Created intuitive admin interfaces for staff with minimal technical training\n\n**Results:**\n* Reduced administrative workload by 60% through automated record management\n* Eliminated paper-based processes and manual data entry errors\n* Provided instant access to student records for authorized staff\n* System handles 500+ student records without performance issues\n* Client saved thousands compared to commercial software alternatives",
       images: [HCCPortal4, HCCPortal1, HCCPortal2, HCCPortal3],
       featured: true,
+    },
+    {
+      title: "Barangay Information Tracking System",
+      description:
+        "A centralized web application for managing household, resident, and official records in a local barangay.",
+      tech: ["PHP", "JavaScript", "MySQL", "Full-Stack Development"],
+      details:
+        "* Developed a comprehensive tracking system for managing barangay information. \n* Implemented features to record and access detailed data on residents, services, and community resources. \n* Improved administrative efficiency through streamlined data management workflows. \n* Enhanced data accessibility for authorized personnel to support informed decision-making. \n* Ensured accurate and up-to-date information to aid in community planning and service delivery.",
+      images: [BrgyTracking1, BrgyTracking2],
     },
     {
       title: "Automated Coin Locker",
@@ -72,8 +72,10 @@ export const Projects = () => {
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Client Case Studies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project, idx) => (
+          <div className="space-y-8">
+          {/* Featured Projects - Side by Side */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {projects.filter(project => project.featured).map((project, idx) => (
               <div
                 key={idx}
                 className={`p-6 rounded-xl border hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition ${
@@ -82,11 +84,6 @@ export const Projects = () => {
                     : 'border-white/10 hover:border-blue-500/30'
                 }`}
               >
-                {project.featured && (
-                  <div className="inline-block bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-xs px-3 py-1 rounded-full mb-3 font-semibold">
-                    Featured Case Study
-                  </div>
-                )}
                 <h3 className={`text-xl font-bold mb-2 ${project.featured ? 'text-white' : ''}`}>
                   {project.title}
                 </h3>
@@ -120,7 +117,39 @@ export const Projects = () => {
               </div>
             ))}
           </div>
+
+          {/* Other Projects */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.filter(project => !project.featured).map((project, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+              >
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex justify-between items-center">
+                  <button
+                    onClick={() => setModalContent(project)}
+                    className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                  >
+                    View Project →
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+          </div>
       </RevealOnScroll>
 
       {/* Modal */}
@@ -129,16 +158,9 @@ export const Projects = () => {
           <div className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 border border-gray-700">
               {/* Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{modalContent.title}</h3>
-                  <p className="text-gray-400">{modalContent.description}</p>
-                </div>
-                {modalContent.featured && (
-                  <div className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                    Featured
-                  </div>
-                )}
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">{modalContent.title}</h3>
+                <p className="text-gray-400">{modalContent.description}</p>
               </div>
 
               {/* Content */}

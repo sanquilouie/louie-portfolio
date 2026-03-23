@@ -8,29 +8,33 @@ export const Home = () => {
     >
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
             I Fix & Improve Web Systems
           </h1>
 
           <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-            Freelance developer specializing in PHP, MySQL, and JavaScript. 
-            <br />I take over existing systems, fix bugs, and add features that keep your business running smoothly.
-            <br />No drama, no delays—just reliable solutions that work.
+            Freelance developer focused on PHP, MySQL, and JavaScript systems.
+            <br />
+            I help fix bugs, improve existing tools, and add practical features
+            for admin panels, portals, and business workflows.
+            <br />
+            Reliable, maintainable solutions built around what your system
+            actually needs.
           </p>
+
           <div className="flex justify-center space-x-4">
             <a
               href="#services"
-              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
             >
               What I Do
             </a>
 
             <a
               href="#contact"
-              className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
-             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"
+              className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10"
             >
-              Get Help Now
+              Discuss Your Project
             </a>
           </div>
         </div>

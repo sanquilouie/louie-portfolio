@@ -6,49 +6,30 @@ import {
   FaReact,
   FaJs,
   FaNodeJs,
-  FaPython,
-  FaAws,
   FaPhp,
   FaDatabase,
 } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiPhpmyadmin } from "react-icons/si";
+import { SiTailwindcss, SiPhpmyadmin } from "react-icons/si";
 
 export const About = () => {
-  const frontendSkills = [
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "JavaScript",
-  ];
+  const frontendSkills = ["HTML", "CSS", "Bootstrap", "JavaScript"];
 
-  const backendSkills = [
-    "PHP",
-    "MySQL", 
-    "SQL",
-    "phpMyAdmin"
-  ];
+  const backendSkills = ["PHP", "MySQL", "SQL", "phpMyAdmin"];
 
-  const additionalSkills = [
-    "React",
-    "Node.js", 
-    "Tailwind CSS"
-  ];
+  const additionalSkills = ["React", "Node.js", "Tailwind CSS"];
 
   const iconMap = {
-  HTML: <FaHtml5 />,
-  CSS: <FaCss3Alt />,
-  Bootstrap: <FaBootstrap />,
-  React: <FaReact />,
-  "Tailwind CSS": <SiTailwindcss />,
-  JavaScript: <FaJs />,
-  "Node.js": <FaNodeJs />,
-  Python: <FaPython />,
-  AWS: <FaAws />,
-  MongoDB: <SiMongodb />,
-  PHP: <FaPhp />,
-  phpMyAdmin: <SiPhpmyadmin />,
-  SQL: <FaDatabase />,
-};
+    HTML: <FaHtml5 />,
+    CSS: <FaCss3Alt />,
+    Bootstrap: <FaBootstrap />,
+    React: <FaReact />,
+    "Tailwind CSS": <SiTailwindcss />,
+    JavaScript: <FaJs />,
+    "Node.js": <FaNodeJs />,
+    PHP: <FaPhp />,
+    phpMyAdmin: <SiPhpmyadmin />,
+    SQL: <FaDatabase />,
+  };
 
   return (
     <section
@@ -62,24 +43,33 @@ export const About = () => {
           </h2>
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
-              I'm a freelance developer who specializes in taking over and improving existing web systems. With real-world experience working directly with businesses, I've helped clients fix broken functionality, modernize legacy code, and add features that solve actual business problems.
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              I work on existing web systems that need fixes, improvements, or
+              additional features. My experience includes business-facing tools
+              such as admin panels, portals, and database-driven applications
+              built with PHP, MySQL, and JavaScript.
 
-              <br /><br />My approach is practical and client-focused. I don't just write code—I deliver solutions that keep your business running smoothly. Whether it's debugging a critical issue, optimizing database performance, or building a new admin interface, I focus on results that matter.
+              <br />
+              <br />
+              I’m most comfortable working on practical problems like debugging
+              broken functionality, improving system workflows, and making older
+              codebases easier to maintain. I focus on solutions that are clear,
+              usable, and realistic for the project.
 
-              <br /><br />I work primarily with PHP, MySQL, and JavaScript because these technologies power most business-critical systems. I'm not interested in the latest frameworks—I'm interested in what works for your business and what I can maintain reliably for the long term.
+              <br />
+              <br />
+              My approach is straightforward: understand the system, fix what is
+              not working, and improve what can be made more reliable over time.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Frontend</h3>
+                <h3 className="text-xl font-bold mb-4">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="flex items-center gap-2 bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition
-                    "
+                      className="flex items-center gap-2 bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                     >
                       {iconMap[tech]}
                       {tech}
@@ -89,14 +79,12 @@ export const About = () => {
               </div>
 
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Backend</h3>
+                <h3 className="text-xl font-bold mb-4">Backend</h3>
                 <div className="flex flex-wrap gap-2">
                   {backendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="flex items-center gap-2 bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition
-                    "
+                      className="flex items-center gap-2 bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                     >
                       {iconMap[tech]}
                       {tech}
@@ -106,14 +94,12 @@ export const About = () => {
               </div>
 
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Additional</h3>
+                <h3 className="text-xl font-bold mb-4">Additional</h3>
                 <div className="flex flex-wrap gap-2">
                   {additionalSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="flex items-center gap-2 bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition
-                    "
+                      className="flex items-center gap-2 bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                     >
                       {iconMap[tech]}
                       {tech}
@@ -126,41 +112,43 @@ export const About = () => {
 
           <div className="gap-6 mt-8">
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <strong> B.S. in Information Technology </strong> 
-                  <br /> Araullo University Philippines
-                  <br />Graduated: 2019
-              </ul>
+              <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
+              <div className="text-gray-300 space-y-1">
+                <p className="font-semibold">B.S. in Information Technology</p>
+                <p>Araullo University, Philippines</p>
+                <p>Graduated: 2019</p>
+              </div>
             </div>
           </div>
-          <div className=" gap-6 mt-8">
+
+          <div className="gap-6 mt-8">
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4"> 💼 Client Experience </h3>
-              <div className="space-y-4 text-gray-300">
+              <h3 className="text-xl font-bold mb-4">💼 Experience</h3>
+              <div className="space-y-6 text-gray-300">
                 <div>
                   <h4 className="font-semibold">
-                    {" "}
-                    Freelance Web Developer (Self-Employed) (2023 - Present){" "}
+                    Freelance Web Developer (Self-Employed) · 2023 - Present
                   </h4>
-                  <p>
-                     * Fixed critical bugs and restored functionality in legacy PHP systems
-                    <br /> * Took over and improved a Bus Fare System for a transport business client
-                    <br /> * Built custom admin portals and student management systems
-                    <br /> * Integrated hardware devices and optimized database performance
-                    <br /> * Work directly with business owners to deliver practical solutions
+                  <p className="mt-2">
+                    Worked on web-based systems involving bug fixes, feature
+                    improvements, and database-driven workflows.
                   </p>
+                  <ul className="list-disc list-inside mt-2 space-y-1 text-gray-400">
+                    <li>Fixed issues and restored functionality in existing PHP systems</li>
+                    <li>Improved a bus fare management system for a transport business</li>
+                    <li>Built admin portals and student management features</li>
+                    <li>Worked with database updates, reporting logic, and system enhancements</li>
+                  </ul>
                 </div>
 
                 <div>
                   <h4 className="font-semibold">
-                    {" "}
-                    CSR / Voice Agent at iQor Philippines (2018 - 2024){" "}
+                    CSR / Voice Agent at iQor Philippines · 2018 - 2024
                   </h4>
-                  <p>
-                    * Provided excellent customer service and support to clients, resolving issues efficiently.
-                    <br /> * Utilized strong communication skills to handle inquiries and provide solutions.
-                    <br /> * Gained experience in managing customer relationships and problem-solving.
+                  <p className="mt-2 text-gray-400">
+                    Developed communication, problem-solving, and client support
+                    skills while handling customer concerns in a fast-paced
+                    environment.
                   </p>
                 </div>
               </div>
